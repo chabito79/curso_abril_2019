@@ -1,0 +1,15 @@
+.navbar-default {
+    /* background-color: #98d85b; */
+    border-color: #5e64ff;
+}
+
+ul.list-unstyled.sidebar-menu.sidebar-stat {
+    border: 1px #5e64ff solid;
+    padding: 3px;
+}
+
+.sidebar-menu h6, .sidebar-menu .h6 {
+    color: #5e64ff;
+    /* margin-top: 0px; */
+    font-weight: 900;
+}

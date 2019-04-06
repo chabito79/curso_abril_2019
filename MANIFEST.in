@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include salas *.css
+recursive-include salas *.csv
+recursive-include salas *.html
+recursive-include salas *.ico
+recursive-include salas *.js
+recursive-include salas *.json
+recursive-include salas *.md
+recursive-include salas *.png
+recursive-include salas *.py
+recursive-include salas *.svg
+recursive-include salas *.txt
+recursive-exclude salas *.pyc
