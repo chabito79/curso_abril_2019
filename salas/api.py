@@ -30,3 +30,20 @@ def generar_evento_capacitacion(user,metodo):
     })
     evento.insert()
     frappe.msgprint('Evento de induccion generado.')
+
+
+def cada_minuto():
+    evento = frappe.get_doc({
+        "doctype": "Evento Sala",
+        "nombre": "Cada Minuto",
+        "tipo": "Capacitacion Interna"
+    })
+    evento.insert()
+
+def cada_cuatro_minutos():
+    evento = frappe.get_doc({
+        "doctype": "Evento Sala",
+        "nombre": "Cada 4 minutos",
+        "tipo": "Capacitacion Interna"
+    })
+    evento.insert()
