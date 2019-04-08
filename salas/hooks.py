@@ -100,16 +100,16 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-scheduler_events = {
-	"all": [
-		"salas.api.cada_cuatro_minutos"
-	],
-	"cron": {
-        "* * * * *": [
-            "salas.api.cada_minuto"
-        ]
-    }
-}
+# scheduler_events = {
+# 	"all": [
+# 		"salas.api.cada_cuatro_minutos"
+# 	],
+# 	"cron": {
+#         "* * * * *": [
+#             "salas.api.cada_minuto"
+#         ]
+#     }
+# }
 
 # Testing
 # -------
