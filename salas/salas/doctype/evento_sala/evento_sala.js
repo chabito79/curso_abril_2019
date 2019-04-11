@@ -1,7 +1,44 @@
 // Copyright (c) 2019, Ruben and contributors
 // For license information, please see license.txt
+frappe.ui.form.on('Evento Sala Item', {
+  servicios_add: function(frm) {
+      console.log('agregando servicios')
+   },
+   servicios_remove: function(frm) {
+      console.log('REMOVIENDO servicios')
+   },
+   servicios_move: function(frm) {
+      console.log('MOVIENDO SERVICIOS DE LA TABLA')
+   }
+});
 
 frappe.ui.form.on('Evento Sala', {
+	empleado: function(frm) {
+		// frappe.db.get_value("Employee", {'name': frm.doc.empleado } , ['last_name','gender'], (r) => { console.log(r) } )
+		let lista = frappe.db.get_list("Employee", { fields: ['name','gender'] } )
+		console.log(lista)
+	},
+	setup: function(frm) {
+		// console.log("SETUP")
+		// debugger
+	},
+	onload: function(frm) {
+		// console.log("onload")
+		// debugger
+	},
+	refresh: function(frm) {
+		// console.log("REFRESH")
+		inicio_reqd(frm)
+		$('.btn[data-fieldname=mostrar_alerta]').removeClass('btn-xs btn-default').addClass('btn-lg btn-danger')
+		// debugger
+	},
+	onload_post_render: function(frm) {
+		// console.log("ONLOAD POST RENDER")
+		// debugger
+	},
+	mostrar_alerta: function(frm) {
+		alert('Alerta Mostrada')
+	},
 	tipo: function(frm){
 		switch(frm.doc.tipo) {
 		  case "Conferencia":
@@ -18,9 +55,6 @@ frappe.ui.form.on('Evento Sala', {
 		    break;
 		}
 	},
-	refresh: function(frm) {
-		inicio_reqd(frm)
-	},
 	sala: function(frm) {
 		inicio_reqd(frm)
 	},
@@ -34,7 +68,7 @@ frappe.ui.form.on('Evento Sala', {
 						fieldname:[ 'mensaje', 'hora_inicio']
 					},
 					callback: function(r) {
-						console.log(r.message)
+						// console.log(r.message)
 						let mensaje = r.message.mensaje
 						// comparacion(frm, r.message.hora_inicio)
 						// Swal.fire({  //Usamos sweet alert
@@ -64,8 +98,7 @@ var comparacion = function(frm, hora_inicio){
 
 var inicio_reqd = function (frm) {
 	if (frm.doc.sala === "San Diego") {
-		frm.fields_dict.inicio.df.reqd = 1
-		frm.refresh_field('inicio')
+		frm.set_df_property('inicio','reqd',1)
 	} else {
 		frm.fields_dict.inicio.df.reqd = 0
 		frm.refresh_field('inicio')

@@ -1,0 +1,23 @@
+{
+ "content": null, 
+ "creation": "2019-04-10 09:50:49.730548", 
+ "docstatus": 0, 
+ "doctype": "Page", 
+ "idx": 0, 
+ "modified": "2019-04-10 09:50:49.730548", 
+ "modified_by": "Administrator", 
+ "module": "Salas", 
+ "name": "salas-disponibles", 
+ "owner": "Administrator", 
+ "page_name": "salas disponibles", 
+ "roles": [
+  {
+   "role": "All"
+  }
+ ], 
+ "script": null, 
+ "standard": "Yes", 
+ "style": null, 
+ "system_page": 0, 
+ "title": "Lista de Salas disponibles"
+}
