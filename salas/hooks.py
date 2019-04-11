@@ -26,6 +26,13 @@ website_context = {
 # Includes in <head>
 # ------------------
 
+# Fixtures (to import DocType customisations)
+# --------
+fixtures = [
+		"Custom Field",
+		"Custom Script"
+		]
+
 # include js, css files in header of desk.html
 app_include_css = "/assets/salas/css/salas.css"
 app_include_js = ["/assets/salas/js/salas.js","/assets/salas/js/sweetalert2.all.min.js"]

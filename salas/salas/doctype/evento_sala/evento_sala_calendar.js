@@ -6,6 +6,7 @@ frappe.views.calendar["Evento Sala"] = {
 		"allDay": "all_day",
 		"title": "nombre"
 	},
+	gantt: false,
   options: {
     defaultView: 'listWeek',
     slotDuration: '01:00:00'

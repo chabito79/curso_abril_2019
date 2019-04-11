@@ -4,7 +4,7 @@
  "docstatus": 0, 
  "doctype": "Page", 
  "idx": 0, 
- "modified": "2019-04-10 11:46:34.493252", 
+ "modified": "2019-04-11 11:41:12.724598", 
  "modified_by": "Administrator", 
  "module": "Complejos", 
  "name": "complejos-sala", 
@@ -12,7 +12,7 @@
  "page_name": "complejos sala", 
  "roles": [
   {
-   "role": "All"
+   "role": "System Manager"
   }
  ], 
  "script": null, 

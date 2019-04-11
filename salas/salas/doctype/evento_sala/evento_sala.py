@@ -7,7 +7,9 @@ import frappe
 from frappe.model.document import Document
 
 class EventoSala(Document):
-	pass
+	def on_submit(self):
+		frappe.sendmail(recipients=self.usuario, subject="Nuevo evento tipo: " + self.tipo , delayed=False)
+		frappe.msgprint('Correo enviado exitosamente')
 
 
 @frappe.whitelist()

@@ -3,7 +3,15 @@
 
 frappe.ui.form.on('Chart Sala', {
 	refresh: function(frm) {
+		if (frappe.user.has_role('System Manager')) {
+			console.log('Felicidades eres admin')
+		} else {
+			alert('no tienes permiso de ver este chart')
+		}
 
+	},
+	tipo: function(frm) {
+    frm.events.sala(frm)
 	},
 	sala: function(frm) {
 		frappe.call({
@@ -25,7 +33,7 @@ frappe.ui.form.on('Chart Sala', {
 					},
 					colors: ['#ff5857'],
 					format_tooltip_x: d=>d +' personas',
-					type: 'line',
+					type: frm.doc.tipo ,
 					height: 140
 				};
 				new Chart('.grafico', args);

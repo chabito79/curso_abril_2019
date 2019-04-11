@@ -1,0 +1,11 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Custom Script", 
+  "dt": "Item", 
+  "modified": "2019-04-11 13:02:10.763872", 
+  "name": "Item-Client", 
+  "script": "frappe.ui.form.on('Item', {\n    validate: function(frm) {\n\tfrappe.show_alert('Grabaste el Item')\n    }\n});", 
+  "script_type": "Client"
+ }
+]
